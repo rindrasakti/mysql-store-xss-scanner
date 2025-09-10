@@ -8,7 +8,7 @@ This tool helps you detect potential Cross-Site Scripting (XSS) payloads inside 
 
 ## 📦 Features
 
-- ✅ Scans `.sql` dump files line-by-line (efficient for files >20GB)
+- ✅ Scans `.sql` dump files line-by-line (efficient for big sqldump)
 - ✅ Supports built-in XSS patterns or custom pattern files
 - ✅ Cross-platform CLI (Linux, Windows, macOS)
 - ✅ Outputs flagged lines directly to the terminal
@@ -26,7 +26,7 @@ mysqldump -u <username> -p <database_name> > label_dump.sql
 Example:
 
 ```bash
-mysqldump -u root -p label > label_dump.sql
+mysqldump -u root -p database_name > label_dump.sql
 ```
 
 > You can add `--skip-comments --compact` for a cleaner output.
@@ -36,7 +36,8 @@ mysqldump -u root -p label > label_dump.sql
 ## 🐍 2. Installing the Scanner
 
 ### a. Clone or copy `scanner.py` and `requirement.txt`
-
+git clone https://github.com/rindrasakti/mysql-store-xss-scanner.git
+cd mysql-store-xss-scanner
 ### b. Install Python dependencies
 
 ```bash
@@ -94,5 +95,6 @@ eval(
 
 Developed by Arindra (Momoci) — a DevSecOps enthusiast with a passion for scripting, digital defense, and creative tooling.  
 Feel free to contribute, suggest improvements, or fork the project!
+
 
 
